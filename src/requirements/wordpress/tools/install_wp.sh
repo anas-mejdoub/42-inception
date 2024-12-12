@@ -2,13 +2,13 @@
 
 echo "waiting for mariadb.."
 sleep 3
-if [ -f "/var/www/html/wp-config.php"]; then
+if [ -f "/var/www/html/wp-config.php" ]; then
 	echo "wp is already installed !"
 	echo "exiting now with 0..."
 	exit 0;
 fi
 
-if [! -d "/usr/local/bin/wp"]; then 
+if [ ! -d "/usr/local/bin/wp" ]; then 
 	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	chmod +x wp-cli.phar
 	mv wp-cli.phar /usr/local/bin/wp
