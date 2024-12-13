@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  wordpress:                       # Define the web application service
+    build:
+      context: ./requirements/wordpress      # Path to the Dockerfile
+    container_name : wordpress
+    ports:
+      - "9000:9000"            # Map port 80 in the container to port 8080 on the host
+    environment:
+      WP_HOST: mariadb:3306
+      WP_TITLE: ${WP_TITLE}
+      WP_URL: ${WP_URL}
+      WP_ADMIN: ${WP_ADMIN}
+      WP_ADMIN_PASSWD: ${WP_ADMIN_PASSWD}
+      WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+      WP_DB_NAME: ${WP_DB_NAME}
+    depends_on:
+      - mariadb   
+    networks:
+        - inceptionNetwork
+  mariadb:                        # Define the database service
+    build :
+      context: ./requirements/mariadb   # Use the official MariaDB image
+    container_name : mariadb
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWD: ${DB_PASSWD}
+    ports:
+        - "3306:3306"
+    restart: always
+    networks:
+        - inceptionNetwork
+      #volumes:
+      #db_data: 
+  nginx:
+    build :
+      context : ./requirements/nginx
+    container_name: nginx
+    ports:
+      - "433:433"
+    networks:
+        - inceptionNetwork
+    depends_on:
+      - wordpress
+        
+        
+
+networks:
+  inceptionNetwork :
+      driver: bridge 

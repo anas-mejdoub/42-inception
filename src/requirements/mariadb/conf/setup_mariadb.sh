@@ -9,7 +9,8 @@ DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.
 ALTER USER 'root'@'localhost' IDENTIFIED BY '${DB_ROOT_PASSWD}';
 CREATE DATABASE ${WP_DB_NAME} CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE USER '${DB_USER}'@'%' IDENTIFIED by '${DB_PASSWD}';
-GRANT ALL PRIVILEGES ON ${WP_DB_NAME}.* TO '${DB_USER}'@'%';
+GRANT ALL PRIVILEGES ON ${WP_DB_NAME}.* TO '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWD}';
+
 FLUSH PRIVILEGES;
 EOF
 	mariadbd --user=mysql --bootstrap < /tmp/init_mariadb.sql
