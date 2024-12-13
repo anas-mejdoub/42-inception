@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -d "/var/lib/mysql/${WP_DB_NAME}" ]; then
-	<< EOF > /tmp/init_mariadb.sql
+	cat << EOF > /tmp/init_mariadb.sql
 USE mysql;
 FLUSH PRIVILEGES;
 DELETE FROM mysql.user WHERE User='';
@@ -18,4 +18,4 @@ else
 fi
 
 echo "running the database now ..."
-exec mariadb --user=mysql --bind-address=0.0.0.0
+exec mariadbd --user=mysql --bind-address=0.0.0.0
