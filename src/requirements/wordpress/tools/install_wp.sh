@@ -28,4 +28,4 @@ wp config create --dbname=$WP_DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASSWD --db
 
 wp core install  --url="$WP_URL" --title="$WP_TITLE" --admin_user="$WP_ADMIN" --admin_password="$WP_ADMIN_PASSWD" --admin_email="$WP_ADMIN_EMAIL" --allow-root
 echo "FPM is strating..." 
-php-fpm8.2 -F
+exec php-fpm8.2 -F
