@@ -75,7 +75,7 @@ services:
     restart : always
     environment:
       FTP_USER: anas
-      FTP_PASWWD: anas
+      FTP_PASSWD: anas
         
 
 networks:
