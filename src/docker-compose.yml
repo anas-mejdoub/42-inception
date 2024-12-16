@@ -1,12 +1,12 @@
 version: "3.9"
 
 services:
-  wordpress:                       # Define the web application service
+  wordpress:
     build:
-      context: ./requirements/wordpress      # Path to the Dockerfile
+      context: ./requirements/wordpress
     container_name : wordpress
     ports:
-      - "9000:9000"            # Map port 80 in the container to port 8080 on the host
+      - 9000:9000
     environment:
       WP_HOST: mariadb:3306
       WP_TITLE: inception
@@ -23,9 +23,9 @@ services:
         - inceptionNetwork
     volumes:
       - wordpress_data:/var/www/html/ 
-  mariadb:                        # Define the database service
+  mariadb:
     build :
-      context: ./requirements/mariadb   # Use the official MariaDB image
+      context: ./requirements/mariadb
     container_name : mariadb
     environment:
       WP_HOST: mariadb:3306
@@ -39,7 +39,7 @@ services:
       DB_PASSWD: 8420
       DB_ROOT_PASSWD: 8420
     ports:
-        - "3306:3306"
+        - 3306:3306
     restart: always
     networks:
         - inceptionNetwork
@@ -51,7 +51,7 @@ services:
       context : ./requirements/nginx
     container_name: nginx
     ports:
-      - "443:443"
+      - 443:443
     networks:
         - inceptionNetwork
     depends_on:
