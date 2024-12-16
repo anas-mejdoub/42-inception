@@ -73,6 +73,9 @@ services:
     volumes:
         - wordpress_data:/var/www/html/
     restart : always
+    environment:
+      FTP_USER: anas
+      FTP_PASWWD: anas
         
 
 networks:
