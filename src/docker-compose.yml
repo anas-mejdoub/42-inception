@@ -6,7 +6,7 @@ services:
       context: ./requirements/wordpress
     container_name : wordpress
     ports:
-      - 9000:9000
+      - "9000:9000"
     environment:
       WP_HOST: mariadb:3306
       WP_TITLE: inception
@@ -22,7 +22,8 @@ services:
     networks:
         - inceptionNetwork
     volumes:
-      - wordpress_data:/var/www/html/ 
+      - wordpress_data:/var/www/html/
+    restart : always
   mariadb:
     build :
       context: ./requirements/mariadb
@@ -39,27 +40,39 @@ services:
       DB_PASSWD: 8420
       DB_ROOT_PASSWD: 8420
     ports:
-        - 3306:3306
+        - "3306:3306"
     restart: always
     networks:
         - inceptionNetwork
     volumes:
       - db_data:/var/lib/mysql
-      #db_data: 
   nginx:
     build :
       context : ./requirements/nginx
     container_name: nginx
     ports:
-      - 443:443
+      - "443:443"
     networks:
         - inceptionNetwork
     depends_on:
       - wordpress
     volumes:
       - wordpress_data:/var/www/html/
-
-        
+    restart : always
+  ftp:
+    build :
+      context : ./requirements/bonus/ftp
+    container_name : ftp
+    ports:
+      - "21:21"
+      - "3000-3100:3000-3100"
+    networks :
+      - inceptionNetwork
+    depends_on:
+        - wordpress
+    volumes:
+        - wordpress_data:/var/www/html/
+    restart : always
         
 
 networks:
