@@ -84,12 +84,10 @@ networks:
 volumes:
   wordpress_data:
     driver_opts:
-      o: bind
-      type: none
+      type: bind
       device: /home/kali/data/wp
   db_data:
     driver_opts:
-      o: bind
-      type: none
+      type: bind
       device: /home/kali/data/mariadb
 
