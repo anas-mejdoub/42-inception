@@ -76,6 +76,19 @@ services:
     environment:
       FTP_USER: anas
       FTP_PASSWD: anas
+  redis:
+     build :
+       context: ./requirements/bonus/redis
+     container_name : redis
+     ports:
+       - "6379:6379"
+     networks:
+       - inceptionNetwork
+     depends_on:
+       - wordpress
+     volumes:
+       - wordpress_data:/var/www/html
+     restart : always
         
 
 networks:
