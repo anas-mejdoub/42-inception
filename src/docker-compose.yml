@@ -98,9 +98,9 @@ volumes:
   wordpress_data:
     driver_opts:
       type: bind
-      device: /home/kali/data/wp
+      device: /home/amejdoub/data/wp
   db_data:
     driver_opts:
       type: bind
-      device: /home/kali/data/mariadb
+      device: /home/amejdoub/data/mariadb
 
