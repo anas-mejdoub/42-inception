@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "waiting for mariadb.."
-sleep 3
+sleep 10
 if [ -f "/var/www/html/wp-config.php" ]; then
 	echo "wp is already installed !"
-	echo "exiting now with 0..."
-	exit 0;
+	echo "php FPM is starting now"
+	exec php-fpm8.2 -F
 fi
 
 if [ ! -d "/usr/local/bin/wp" ]; then 
@@ -15,11 +15,11 @@ if [ ! -d "/usr/local/bin/wp" ]; then
 fi
 
 
-mkdir -p "/var/www/html/wordpress"
-chmod -R 775 "/var/www/html/wordpress"
-chown -R www-data:www-data "/var/www/html/wordpress"
+mkdir -p "/var/www/html/"
+chmod -R 775 "/var/www/html/"
+chown -R www-data:www-data "/var/www/html/"
 
-cd /var/www/html/wordpress
+cd /var/www/html/
 
 # donwloading the core files of wp by using --allow-root for bypassing the root user err
 wp core download --allow-root
@@ -28,5 +28,5 @@ wp config create --dbname=$WP_DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASSWD --db
 wp redis enable --allow-root
 
 wp core install  --url="$WP_URL" --title="$WP_TITLE" --admin_user="$WP_ADMIN" --admin_password="$WP_ADMIN_PASSWD" --admin_email="$WP_ADMIN_EMAIL" --allow-root
-echo "FPM is strating..." 
+echo "php FPM is strating now" 
 exec php-fpm8.2 -F

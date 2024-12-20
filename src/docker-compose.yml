@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   wordpress:
     build:
@@ -87,8 +85,8 @@ services:
      depends_on:
        - wordpress
      volumes:
-       - wordpress_data:/var/www/html
-     restart : always
+       - wordpress_data:/var/www/html/
+  #   restart : always
         
 
 networks:
@@ -97,10 +95,12 @@ networks:
 volumes:
   wordpress_data:
     driver_opts:
-      type: bind
+      type: none
       device: /home/amejdoub/data/wp
+      o: bind
   db_data:
     driver_opts:
-      type: bind
+      type: none
       device: /home/amejdoub/data/mariadb
+      o: bind
 
