@@ -57,6 +57,15 @@ services:
     volumes:
       - wordpress_data:/var/www/html
     restart : always
+  portainer:
+    build:
+      context: ./requirements/bonus/portainer
+    container_name: portainer
+    ports:
+      - "9001:9000"
+    networks:
+      - inceptionNetwork
+    restart: always
   ftp:
     build :
       context : ./requirements/bonus/ftp
