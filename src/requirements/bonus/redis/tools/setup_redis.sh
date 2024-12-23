@@ -10,7 +10,7 @@ sed -i "s|bind 127.0.0.1 -::1|bind 0.0.0.0|" /etc/redis/redis.conf
  
 if [ -f /var/www/html/wp-config.php ] ; then
 	cd /var/www/html/
-	wp config set WP_REDIS_HOST 'redis' --type=constant --raw --allow-root
+	wp config set WP_REDIS_HOST 'redis' --type=constant --allow-root
 	wp config set WP_REDIS_PORT 6379 --type=constant --raw --allow-root
 fi
 

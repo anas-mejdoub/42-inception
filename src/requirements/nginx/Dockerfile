@@ -10,7 +10,7 @@ RUN mkdir -p /etc/nginx && \
 
 COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
-COPY ./tools/html/wait.html /var/www/html/wordpress
+COPY ./tools/html/wait.html /var/www/html/wait.html
 
 EXPOSE 443
 

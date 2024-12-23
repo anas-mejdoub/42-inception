@@ -20,7 +20,7 @@ services:
     networks:
         - inceptionNetwork
     volumes:
-      - wordpress_data:/var/www/html/
+      - wordpress_data:/var/www/html
     restart : always
   mariadb:
     build :
@@ -55,7 +55,7 @@ services:
     depends_on:
       - wordpress
     volumes:
-      - wordpress_data:/var/www/html/
+      - wordpress_data:/var/www/html
     restart : always
   ftp:
     build :
