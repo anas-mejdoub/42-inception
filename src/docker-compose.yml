@@ -65,6 +65,8 @@ services:
       - "9001:9000"
     networks:
       - inceptionNetwork
+    volumes:
+      - portainer_v:/var/run
     restart: always
   ftp:
     build :
@@ -122,4 +124,8 @@ volumes:
       type: none
       device: /home/amejdoub/data/mariadb
       o: bind
-
+  portainer_v:
+    driver_opts:
+      type: none
+      device: /var/run/
+      o: bind

@@ -7,8 +7,9 @@
 
 tar -xvf portainer-2.19.2-linux-amd64.tar.gz
 cd portainer
-ls -l
-
+#ls -l
+#cat portainer
+#yes > /dev/null
 # move it to a excutable path and make the binary executable
 #mv portainer /bin/portainer
 
