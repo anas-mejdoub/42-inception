@@ -1,7 +1,7 @@
 FROM debian:12 
 
 RUN apt-get update && apt-get install -y curl \
-	&& curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+	&& curl -fsSL https://deb.nodesource.com/setup_23.x | bash - \
 	&& apt-get install -y nodejs
 
 COPY ./tools/  /var/www/html/static-website
