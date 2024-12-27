@@ -2,7 +2,7 @@ FROM debian:12
 
 RUN apt-get update && apt-get install -y php \
 	php-mysqli \
-	curl
+	curl 
 
 COPY ./tools/setup_adminer.sh /setup_adminer.sh
 
