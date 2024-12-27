@@ -109,7 +109,15 @@ services:
     depends_on: 
       - mariadb
     restart: always
-
+  static-website :
+      build :
+        context: ./requirements/bonus/static-website
+      container_name: static-website
+      ports:
+        - "5173:5173"
+      restart: always
+      networks:
+        - inceptionNetwork
 networks:
   inceptionNetwork :
       driver: bridge 
