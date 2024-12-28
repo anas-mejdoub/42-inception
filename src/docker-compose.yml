@@ -10,11 +10,11 @@ services:
       WP_TITLE: inception
       WP_URL: https://amejdoub.42.fr
       WP_ADMIN: anas
-      WP_ADMIN_PASSWD: 0001
+      WP_ADMIN_PASSWD: anas
       WP_ADMIN_EMAIL: anasmejdoub@gmail.com
       WP_DB_NAME: inception
       DB_USER: anas
-      DB_PASSWD: 8420
+      DB_PASSWD: anas
     depends_on:
       - mariadb   
     networks:
@@ -35,8 +35,8 @@ services:
       WP_ADMIN_EMAIL: anasmejdoub@gmail.com
       WP_DB_NAME: inception
       DB_USER: anas
-      DB_PASSWD: 8420
-      DB_ROOT_PASSWD: 8420
+      DB_PASSWD: anas
+      DB_ROOT_PASSWD: anas
     ports:
         - "3306:3306"
     restart: always

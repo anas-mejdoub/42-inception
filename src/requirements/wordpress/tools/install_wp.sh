@@ -5,6 +5,7 @@ sleep 10
 if [ -f "/var/www/html/wp-config.php" ]; then
 	echo "wp is already installed !"
 	echo "php FPM is starting now"
+	echo "$WP_ADMIN_PASSWD"
 	exec php-fpm8.2 -F
 fi
 
