@@ -21,6 +21,7 @@ services:
         - inceptionNetwork
     volumes:
       - wordpress_data:/var/www/html
+      - redis_data:/var/lib/redis
     restart : always
   mariadb:
     build :
@@ -97,6 +98,7 @@ services:
        - wordpress
      volumes:
        - wordpress_data:/var/www/html/
+       - redis_data:/var/lib/redis
      restart : always
   adminer:
     build:
@@ -136,4 +138,9 @@ volumes:
     driver_opts:
       type: none
       device: /var/run/
+      o: bind
+  redis_data:
+    driver_opts:
+      type: none
+      device: /home/amejdoub/data/redis
       o: bind
