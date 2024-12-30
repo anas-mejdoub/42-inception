@@ -72,9 +72,10 @@ services:
   ftp:
     build :
       context : ./requirements/bonus/ftp
-    container_name : ftp
+    container_name : ftp-server
     ports:
       - "21:21"
+#chown -R www-data:www-data .
       - "3000-3100:3000-3100"
     networks :
       - inceptionNetwork
