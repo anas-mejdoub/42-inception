@@ -46,6 +46,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
   nginx:
+    image: nginx
     build :
       context : ./requirements/nginx
     container_name: nginx
