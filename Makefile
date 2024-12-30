@@ -3,8 +3,8 @@ dirs= ~/data/mariadb ~/data/wp ~/data/phpmyadmin
 all: $(NAME)
 
 $(NAME):
-	@mkdir -p $(dirs)
-	@chown -R www-data:www-data ~/data/wp
+	@sudo mkdir -p $(dirs)
+	@sudo chown -R www-data:www-data ~/data/wp
 	docker-compose -f ./src/docker-compose.yml up -d --build
 
 down:
