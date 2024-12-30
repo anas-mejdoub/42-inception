@@ -21,7 +21,6 @@ services:
         - inceptionNetwork
     volumes:
       - wordpress_data:/var/www/html
-      - redis_data:/var/lib/redis
     restart : always
   mariadb:
     build :
@@ -89,19 +88,18 @@ services:
       FTP_USER: anas
       FTP_PASSWD: anas
   redis:
-     build :
-       context: ./requirements/bonus/redis
-     container_name : redis
-     ports:
-       - "6379:6379"
-     networks:
-       - inceptionNetwork
-     depends_on:
-       - wordpress
-     volumes:
-       - wordpress_data:/var/www/html/
-       - redis_data:/var/lib/redis
-     restart : always
+    build :
+      context: ./requirements/bonus/redis
+    container_name : redis
+    ports:
+      - "6379:6379"
+    networks:
+      - inceptionNetwork
+    depends_on:
+      - wordpress
+    volumes:
+      - wordpress_data:/var/www/html/
+    restart : always
   adminer:
     build:
       context: ./requirements/bonus/adminer
@@ -140,9 +138,4 @@ volumes:
     driver_opts:
       type: none
       device: /var/run/
-      o: bind
-  redis_data:
-    driver_opts:
-      type: none
-      device: /home/amejdoub/data/redis
       o: bind
