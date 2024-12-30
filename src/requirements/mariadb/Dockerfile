@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y mariadb-server && \
 
 EXPOSE 3306
 
-COPY ./conf/setup_mariadb.sh /setup_mariadb.sh
+COPY ./tools/setup_mariadb.sh /setup_mariadb.sh
 
 CMD ["sh", "setup_mariadb.sh"]

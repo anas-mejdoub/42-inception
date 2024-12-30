@@ -19,7 +19,9 @@ services:
       SEC_USER_PASS: second
       SEC_USER_EMAIL: second@gmail.com
     depends_on:
-      - mariadb   
+      - mariadb
+    secrets:
+      - my_secret
     networks:
         - inceptionNetwork
     volumes:
@@ -142,3 +144,7 @@ volumes:
       type: none
       device: /var/run/
       o: bind
+
+secrets:
+  my_secret:
+    file: ./pass.txt
