@@ -15,6 +15,9 @@ services:
       WP_DB_NAME: inception
       DB_USER: anas
       DB_PASSWD: anas
+      SEC_USER_NAME: second
+      SEC_USER_PASS: second
+      SEC_USER_EMAIL: second@gmail.com
     depends_on:
       - mariadb   
     networks:

@@ -11,8 +11,6 @@ if [ -f "/var/www/html/wp-config.php" ]; then
 	sleep 6
 	cd /var/www/html
 	chown -R www-data:www-data .
-	#wp plugin install redis-cache --activate --allow-root
-	#wp redis enable --allow-root
 	exec php-fpm8.2 -F
 fi
 
@@ -34,7 +32,7 @@ wp core download --allow-root
 wp config create --dbname=$WP_DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASSWD --dbhost=mariadb:3306 --allow-root
 wp config set WP_REDIS_HOST 'redis' --type=constant --allow-root
 wp config set WP_REDIS_PORT 6379 --type=constant --raw --allow-root
-
+wp user create $SEC_USER_NAME $SEC_USER_EMAIL --role=editor --user_pass=$SEC_USER_PASS
 wp core install  --url="$WP_URL" --title="$WP_TITLE" --admin_user="$WP_ADMIN" --admin_password="$WP_ADMIN_PASSWD" --admin_email="$WP_ADMIN_EMAIL" --allow-root
 wp plugin install redis-cache --activate --allow-root
 wp redis enable --allow-root
