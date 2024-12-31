@@ -1,19 +1,19 @@
 NAME=inception
-dirs= ~/data/mariadb ~/data/wp ~/data/phpmyadmin
+dirs= ~/data/mariadb ~/data/wp
 all: $(NAME)
 
 $(NAME):
 	@sudo mkdir -p $(dirs)
 	@sudo chown -R www-data:www-data ~/data/wp
-	docker-compose -f ./src/docker-compose.yml up -d --build
+	docker-compose -f ./srcs/docker-compose.yml up -d --build
 
-down:
-	docker-compose -f ./src/docker-compose.yml down
+clean:
+	docker-compose -f ./srcs/docker-compose.yml down
 
-fclean: down
+fclean: clean
 	sudo rm -rf dirs
 	docker system prune -af
 
 
 
-re: down all
+re: clean all
