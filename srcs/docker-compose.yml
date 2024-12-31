@@ -26,6 +26,7 @@ services:
       - wordpress_data:/var/www/html
     secrets:
       - user_db_passwd
+      - credentails
     restart : always
   mariadb:
     build :
@@ -158,3 +159,5 @@ secrets:
     file: ../secrets/db_root_password.txt
   user_db_passwd:
     file: ../secrets/db_password.txt
+  credentails:
+    file: ../secrets/credentails.txt

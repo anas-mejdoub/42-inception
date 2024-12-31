@@ -11,7 +11,7 @@ clean:
 	docker-compose -f ./srcs/docker-compose.yml down
 
 fclean: clean
-	sudo rm -rf dirs
+	sudo rm -rf $(dirs)
 	docker system prune -af
 
 
