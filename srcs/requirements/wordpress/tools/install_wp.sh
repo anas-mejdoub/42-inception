@@ -27,7 +27,7 @@ wp config create --dbname=$WP_DB_NAME --dbuser=$DB_USER --dbpass=$USER_PASS_DB -
 wp config set WP_REDIS_HOST 'redis' --type=constant --allow-root
 wp config set WP_REDIS_PORT 6379 --type=constant --raw --allow-root
 wp user create $SEC_USER_NAME $SEC_USER_EMAIL --role=editor --user_pass=$SEC_USER_PASS --allow-root
-wp core install  --url="$WP_URL" --title="$WP_TITLE" --admin_user="$ADMIN_WP" --admin_password="$ADMIN_WP_PASSWD" --admin_email="$WP_ADMIN_EMAIL" --allow-root
+wp core install  --url="$WP_URL" --title="$WP_TITLE" --admin_user="$ADMIN_WP" --admin_password="$USER_PASS_DB" --admin_email="$WP_ADMIN_EMAIL" --allow-root
 wp plugin install redis-cache --activate --allow-root
 wp redis enable --allow-root
 wp theme install twentytwentyfour --allow-root
