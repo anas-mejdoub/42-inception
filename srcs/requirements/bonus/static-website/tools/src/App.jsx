@@ -16,7 +16,7 @@ const App = () => {
   <div className="w-screen bg-gradient-to-b from-gray-900 to-black ">      
   <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
         <div className=" mx-auto px-4 flex justify-between items-center">
-          <span className="text-md font-semibold italic text-white">Anas</span>
+          <span className="text-xl font-bold text-white">Anas</span>
           <div className="flex gap-12">
             <a href="#about" className="text-gray-300 hover:text-white text-lg">About</a>
             <a href="#experience" className="text-gray-300 hover:text-white text-lg">Experience</a>
@@ -30,7 +30,7 @@ const App = () => {
       <main className="w-full mx-auto px-4 text-white">        {/* About Section */}
         <section id="about" className="mb-24 text-center w-full">
           <img src={myPicture} alt="Profile" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover ring-4 ring-blue-500" />
-          <h1 className="text-6xl font-bold mb-6">Anas</h1>
+          <h1 className="text-2xl font-semibold italic text-white">Anas</h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Software Engineering Student passionate about developing innovative solutions and learning new technologies.
           </p>
