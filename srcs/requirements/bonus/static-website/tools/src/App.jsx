@@ -13,10 +13,9 @@ const App = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl bg-gradient-to-b from-gray-900 to-black min-h-screen min-w-screen">
-      <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
+<div className="w-full bg-gradient-to-b from-gray-900 to-black min-h-screen">      <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
         <div className=" mx-auto px-4 flex justify-between items-center">
-          <span className="text-2xl font-bold text-white">Anas</span>
+          <span className="text-xl font-bold text-white">Anas</span>
           <div className="flex gap-12">
             <a href="#about" className="text-gray-300 hover:text-white text-lg">About</a>
             <a href="#experience" className="text-gray-300 hover:text-white text-lg">Experience</a>
@@ -27,11 +26,11 @@ const App = () => {
         </div>
       </nav>
 
-      <main className="max-w-screen-xl mx-auto px-4 text-white">        {/* About Section */}
+      <main className="w-full-xl mx-auto px-4 text-white">        {/* About Section */}
         <section id="about" className="mb-24 text-center w-full">
           <img src={myPicture} alt="Profile" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover ring-4 ring-blue-500" />
           <h1 className="text-6xl font-bold mb-6">Anas</h1>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Software Engineering Student passionate about developing innovative solutions and learning new technologies.
           </p>
         </section>
@@ -43,7 +42,7 @@ const App = () => {
             <div className="bg-gray-800 p-8 rounded-lg">
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold">Software Engineering Intern</h3>
+                  <h3 className="text-xl font-bold">Software Engineering Intern</h3>
                   <p className="text-blue-400 text-lg">Tech Company</p>
                 </div>
                 <span className="text-gray-400 text-lg">2024 - Present</span>
@@ -63,7 +62,7 @@ const App = () => {
           <div className="bg-gray-800 p-8 rounded-lg">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold">Bachelor of Software Engineering</h3>
+                <h3 className="text-xl font-bold">Bachelor of Software Engineering</h3>
                 <p className="text-blue-400 text-lg">University Name</p>
               </div>
               <span className="text-gray-400 text-lg">2021 - 2025</span>
@@ -83,7 +82,7 @@ const App = () => {
           <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-2 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">E-Commerce Platform</h3>
+              <h3 className="text-xl font-bold mb-4">E-Commerce Platform</h3>
               <p className="text-gray-300 mb-6 text-lg">A full-stack e-commerce solution with React and Node.js</p>
               <div className="flex gap-3">
                 <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">React</span>
@@ -92,7 +91,7 @@ const App = () => {
               </div>
             </div>
             <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Task Management App</h3>
+              <h3 className="text-xl font-bold mb-4">Task Management App</h3>
               <p className="text-gray-300 mb-6 text-lg">A collaborative task management application</p>
               <div className="flex gap-3">
                 <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">React</span>
