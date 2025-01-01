@@ -13,9 +13,9 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen">
-      <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen w-full">
+      <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
+        <div className="container mx-auto px-4 flex justify-between items-center">
           <span className="text-2xl font-bold text-white">Anas</span>
           <div className="flex gap-12">
             <a href="#about" className="text-gray-300 hover:text-white text-lg">About</a>
@@ -27,8 +27,9 @@ const App = () => {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto p-8 text-white">
-        <section id="about" className="mb-24 text-center">
+      <main className="container mx-auto px-4 text-white">
+        {/* About Section */}
+        <section id="about" className="mb-24 text-center w-full">
           <img src={myPicture} alt="Profile" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover ring-4 ring-blue-500" />
           <h1 className="text-6xl font-bold mb-6">Anas</h1>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
@@ -36,9 +37,10 @@ const App = () => {
           </p>
         </section>
 
-        <section id="experience" className="mb-24">
+        {/* Experience Section */}
+        <section id="experience" className="mb-24 w-full">
           <h2 className="text-5xl font-bold mb-12 text-center">Experience</h2>
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
               <div className="flex justify-between items-start mb-6">
                 <div>
@@ -56,15 +58,16 @@ const App = () => {
           </div>
         </section>
 
-        <section id="education" className="mb-24">
+        {/* Education Section */}
+        <section id="education" className="mb-24 w-full">
           <h2 className="text-5xl font-bold mb-12 text-center">Education</h2>
           <div className="bg-gray-800 p-8 rounded-lg">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold">Computer science</h3>
-                <p className="text-blue-400 text-xl">1337</p>
+                <h3 className="text-2xl font-bold">Bachelor of Software Engineering</h3>
+                <p className="text-blue-400 text-xl">University Name</p>
               </div>
-              <span className="text-gray-400 text-xl">2023 - 2026</span>
+              <span className="text-gray-400 text-xl">2021 - 2025</span>
             </div>
             <p className="text-gray-300 text-xl">Relevant Coursework:</p>
             <ul className="list-disc list-inside text-gray-300 mt-4 space-y-2 text-xl">
@@ -76,9 +79,10 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projects" className="mb-24">
+        {/* Projects Section */}
+        <section id="projects" className="mb-24 w-full">
           <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-bold mb-4">E-Commerce Platform</h3>
               <p className="text-gray-300 mb-6 text-xl">A full-stack e-commerce solution with React and Node.js</p>
@@ -100,10 +104,11 @@ const App = () => {
           </div>
         </section>
 
-        <section id="contact" className="mb-24">
+        {/* Contact Section */}
+        <section id="contact" className="mb-24 w-full">
           <h2 className="text-5xl font-bold mb-12 text-center">Contact</h2>
           <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-8">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               <div>
                 <label className="block text-xl font-semibold mb-3" htmlFor="name">Name</label>
                 <input
