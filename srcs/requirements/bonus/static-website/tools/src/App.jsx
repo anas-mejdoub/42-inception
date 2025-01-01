@@ -63,10 +63,10 @@ const App = () => {
           <div className="bg-gray-800 p-8 rounded-lg">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-xl font-bold">Bachelor of Software Engineering</h3>
-                <p className="text-blue-400 text-lg">University Name</p>
+                <h3 className="text-xl font-bold">Computer science</h3>
+                <p className="text-blue-400 text-lg">1337 coding shcool</p>
               </div>
-              <span className="text-gray-400 text-lg">2021 - 2025</span>
+              <span className="text-gray-400 text-lg">2023 - 2026</span>
             </div>
             <p className="text-gray-300 text-lg">Relevant Coursework:</p>
             <ul className="list-disc list-inside text-gray-300 mt-4 space-y-2 text-lg">
@@ -83,21 +83,23 @@ const App = () => {
           <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-2 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">E-Commerce Platform</h3>
-              <p className="text-gray-300 mb-6 text-lg">A full-stack e-commerce solution with React and Node.js</p>
+              <h3 className="text-xl font-bold mb-4">minishell</h3>
+              <p className="text-gray-300 mb-6 text-lg">a mini bash interpreter</p>
               <div className="flex gap-3">
-                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">React</span>
-                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">Node.js</span>
-                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">MongoDB</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">c</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">parser</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">lexer</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">binary trees</span>
               </div>
             </div>
             <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Task Management App</h3>
-              <p className="text-gray-300 mb-6 text-lg">A collaborative task management application</p>
+              <h3 className="text-xl font-bold mb-4">Garage app</h3>
+              <p className="text-gray-300 mb-6 text-lg">a garage management application</p>
               <div className="flex gap-3">
                 <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">React</span>
-                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">Firebase</span>
-                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">Tailwind</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">laravel</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">intercia js</span>
+                <span className="px-4 py-2 bg-blue-900 rounded-full text-lg">mariadb</span>
               </div>
             </div>
           </div>
