@@ -13,9 +13,9 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen min-w-screen">
+    <div className="max-w-screen-2xl bg-gradient-to-b from-gray-900 to-black min-h-screen min-w-screen">
       <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className=" mx-auto px-4 flex justify-between items-center">
           <span className="text-2xl font-bold text-white">Anas</span>
           <div className="flex gap-12">
             <a href="#about" className="text-gray-300 hover:text-white text-lg">About</a>
