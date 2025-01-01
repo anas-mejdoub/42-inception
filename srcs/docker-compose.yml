@@ -1,5 +1,6 @@
 services:
   wordpress:
+    image: wordpress:1
     build:
       context: ./requirements/wordpress
     container_name : wordpress
@@ -29,6 +30,7 @@ services:
       - credentails
     restart : always
   mariadb:
+    image: mariadb:1
     build :
       context: ./requirements/mariadb
     container_name : mariadb
@@ -54,7 +56,7 @@ services:
       - root_db_passwd
       - user_db_passwd
   nginx:
-    image: nginx
+    image: nginx:1
     build :
       context : ./requirements/nginx
     container_name: nginx
@@ -68,6 +70,7 @@ services:
       - wordpress_data:/var/www/html
     restart : always
   portainer:
+    image: portainer:1
     build:
       context: ./requirements/bonus/portainer
     container_name: portainer
@@ -80,6 +83,7 @@ services:
       - save_data_port:/portainer
     restart: always
   ftp:
+    image: portainer:1
     build :
       context : ./requirements/bonus/ftp
     container_name : ftp-server
@@ -97,6 +101,7 @@ services:
       FTP_USER: anas
       FTP_PASSWD: anas
   redis:
+    image: redis:1
     build :
       context: ./requirements/bonus/redis
     container_name : redis
@@ -110,6 +115,7 @@ services:
       - wordpress_data:/var/www/html/
     restart : always
   adminer:
+    image: adminer:1
     build:
       context: ./requirements/bonus/adminer
     container_name: adminer
@@ -121,6 +127,7 @@ services:
       - mariadb
     restart: always
   static-website :
+      image: static-website:1
       build :
         context: ./requirements/bonus/static-website
       container_name: static-website
