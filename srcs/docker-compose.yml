@@ -7,18 +7,15 @@ services:
     ports:
       - "9000:9000"
     environment:
-      WP_HOST: mariadb:3306
-      WP_TITLE: inception
-      WP_URL: 10.11.248.72
-      WP_ADMIN: anas
-      WP_ADMIN_PASSWD: anas
-      WP_ADMIN_EMAIL: anasmejdoub@gmail.com
-      WP_DB_NAME: inception
-      DB_USER: anas
-      DB_PASSWD: anas
-      SEC_USER_NAME: second
-      SEC_USER_PASS: second
-      SEC_USER_EMAIL: second@gmail.com
+      WP_HOST: ${WP_HOST}
+      WP_TITLE: ${WP_TITLE}
+      WP_URL: ${WP_URL}
+      WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
+      WP_DB_NAME: ${WP_DB_NAME}
+      DB_USER: ${DB_USER}
+      SEC_USER_NAME: ${SEC_USER_NAME}
+      SEC_USER_PASS: ${SEC_USER_PASS}
+      SEC_USER_EMAIL: ${SEC_USER_EMAIL}
     depends_on:
       - mariadb
     networks:
@@ -35,16 +32,8 @@ services:
       context: ./requirements/mariadb
     container_name : mariadb
     environment:
-      WP_HOST: mariadb:3306
-      WP_TITLE: inception
-      WP_URL: 10.11.248.72
-      WP_ADMIN: anas
-      WP_ADMIN_PASSWD: anas
-      WP_ADMIN_EMAIL: anasmejdoub@gmail.com
-      WP_DB_NAME: inception
-      DB_USER: anas
-      DB_PASSWD: anas
-      DB_ROOT_PASSWD: anas
+      WP_DB_NAME: ${WP_DB_NAME}
+      DB_USER: ${DB_USER}
     ports:
         - "3306:3306"
     restart: always
@@ -98,8 +87,8 @@ services:
         - wordpress_data:/var/www/html/
     restart : always
     environment:
-      FTP_USER: anas
-      FTP_PASSWD: anas
+      FTP_USER: ${FTP_USER}
+      FTP_PASSWD: ${FTP_PASSWD}
   redis:
     image: redis:1
     build :
