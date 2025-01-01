@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-  <div className="w-full bg-gradient-to-b from-gray-900 to-black ">      
+  <div className="w-screen bg-gradient-to-b from-gray-900 to-black ">      
   <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
         <div className=" mx-auto px-4 flex justify-between items-center">
           <span className="text-xl font-bold text-white">Anas</span>
