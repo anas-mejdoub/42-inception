@@ -13,10 +13,10 @@ const App = () => {
   };
 
   return (
-  <div className=" bg-gradient-to-b from-gray-900 to-black " style={{ width: '90vw' }}>      
+  <div className="w-screen bg-gradient-to-b from-gray-900 to-black ">      
   <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
         <div className=" mx-auto px-4 flex justify-between items-center">
-          <span className="text-xl font-bold text-white">Anas</span>
+          <span className="text-md font-semibold italic text-white">Anas</span>
           <div className="flex gap-12">
             <a href="#about" className="text-gray-300 hover:text-white text-lg">About</a>
             <a href="#experience" className="text-gray-300 hover:text-white text-lg">Experience</a>
