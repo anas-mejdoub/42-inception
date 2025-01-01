@@ -30,7 +30,7 @@ const App = () => {
       <main className="w-full mx-auto px-4 text-white">        {/* About Section */}
         <section id="about" className="mb-24 text-center w-full">
           <img src={myPicture} alt="Profile" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover ring-4 ring-blue-500" />
-          <h1 className="text-2xl font-semibold italic text-white">Anas</h1>
+          <h1 className="text-4xl font-semibold italic text-white">Anas</h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Software Engineering Student passionate about developing innovative solutions and learning new technologies.
           </p>
