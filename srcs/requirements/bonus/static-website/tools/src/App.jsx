@@ -38,7 +38,7 @@ const App = () => {
 
         {/* Experience Section */}
         <section id="experience" className="mb-24 w-full">
-          <h2 className="text-2xl font-bold mb-12 text-center">Experience</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
           <div className="grid grid-cols-1 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
               <div className="flex justify-between items-start mb-6">
@@ -59,7 +59,7 @@ const App = () => {
 
         {/* Education Section */}
         <section id="education" className="mb-24 w-full">
-          <h2 className="text-2xl font-bold mb-12 text-center">Education</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
           <div className="bg-gray-800 p-8 rounded-lg">
             <div className="flex justify-between items-start mb-6">
               <div>
@@ -80,7 +80,7 @@ const App = () => {
 
         {/* Projects Section */}
         <section id="projects" className="mb-24 w-full">
-          <h2 className="text-2xl font-bold mb-12 text-center">Projects</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-2 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-xl font-bold mb-4">E-Commerce Platform</h3>
@@ -105,7 +105,7 @@ const App = () => {
 
         {/* Contact Section */}
         <section id="contact" className="mb-24 w-full">
-          <h2 className="text-2xl font-bold mb-12 text-center">Contact</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Contact</h2>
           <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-8">
             <div className="grid grid-cols-2 gap-8">
               <div>
