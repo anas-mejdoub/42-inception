@@ -13,7 +13,8 @@ const App = () => {
   };
 
   return (
-<div className="w-full bg-gradient-to-b from-gray-900 to-black min-h-screen">      <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
+  <div className="w-full bg-gradient-to-b from-gray-900 to-black ">      
+  <nav className="sticky top-0 bg-gray-800/90 backdrop-blur-sm p-6 mb-12 w-full">
         <div className=" mx-auto px-4 flex justify-between items-center">
           <span className="text-xl font-bold text-white">Anas</span>
           <div className="flex gap-12">
@@ -26,7 +27,7 @@ const App = () => {
         </div>
       </nav>
 
-      <main className="w-full-xl mx-auto px-4 text-white">        {/* About Section */}
+      <main className="w-full mx-auto px-4 text-white">        {/* About Section */}
         <section id="about" className="mb-24 text-center w-full">
           <img src={myPicture} alt="Profile" className="w-40 h-40 rounded-full mx-auto mb-8 object-cover ring-4 ring-blue-500" />
           <h1 className="text-6xl font-bold mb-6">Anas</h1>
