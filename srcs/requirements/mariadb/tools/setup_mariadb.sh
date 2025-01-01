@@ -8,9 +8,9 @@ if [ ! -d "/var/lib/mysql/${WP_DB_NAME}" ]; then
 	cat << EOF > /tmp/init_mariadb.sql
 USE mysql;
 FLUSH PRIVILEGES;
-ALTER USER 'root'@'localhost' IDENTIFIED BY '${PASS}';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '${ROOT_PASS}';
 CREATE DATABASE ${WP_DB_NAME} IF NOT EXISTS;
-CREATE USER '${DB_USER}'@'%' IDENTIFIED by '${DB_PASSWD}';
+CREATE USER '${DB_USER}'@'%' IDENTIFIED by '${USER_PASS}';
 GRANT ALL PRIVILEGES ON ${WP_DB_NAME}.* TO '${DB_USER}'@'%' IDENTIFIED BY '${USER_PASS}';
 FLUSH PRIVILEGES;
 EOF
