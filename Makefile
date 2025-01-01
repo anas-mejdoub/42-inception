@@ -1,5 +1,5 @@
 NAME=inception
-dirs= ~/data/mariadb ~/data/wp
+dirs= ~/data/mariadb ~/data/wp ~/data/portainer
 all: $(NAME)
 
 $(NAME):
