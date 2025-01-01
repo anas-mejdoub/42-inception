@@ -2,7 +2,7 @@
 
 ROOT_PASS=$(cat /run/secrets/root_db_passwd)
 USER_PASS=$(cat /run/secrets/user_db_passwd)
-echo "$PASS test sece"
+
 
 if [ ! -d "/var/lib/mysql/${WP_DB_NAME}" ]; then
 	cat << EOF > /tmp/init_mariadb.sql
