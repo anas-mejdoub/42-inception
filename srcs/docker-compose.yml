@@ -69,7 +69,7 @@ services:
       - inceptionNetwork
     volumes:
       - portainer_v:/var/run
-      - save_data_port:/portainer
+      - save_data_port:/data
     restart: always
   ftp:
     image: ftp-server:1
