@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # download the portainer
-#curl -LO https:/github.com/portainer/portainer/releases/download/2.19.2/portainer-2.19.2-linux-amd64.tar.gz
+curl -LO https:/github.com/portainer/portainer/releases/download/2.19.2/portainer-2.19.2-linux-amd64.tar.gz
 
 # extract the portainer 
 

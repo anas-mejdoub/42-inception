@@ -72,7 +72,7 @@ services:
       - save_data_port:/portainer
     restart: always
   ftp:
-    image: portainer:1
+    image: ftp-server:1
     build :
       context : ./requirements/bonus/ftp
     container_name : ftp-server
