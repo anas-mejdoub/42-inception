@@ -1,7 +1,7 @@
 #!/bin/bash
 USER_PASS_DB=$(cat /run/secrets/user_db_passwd)
-ADMIN_WP=$(cat /run/secrets/credentails | head -n 1)
-ADMIN_WP_PASSWD=$(cat /run/secrets/credentails | head -n 2 | tail -n 1)
+ADMIN_WP=$(cat /run/secrets/credentials | head -n 1)
+ADMIN_WP_PASSWD=$(cat /run/secrets/credentials | head -n 2 | tail -n 1)
 echo "waiting for mariadb.."
 sleep 10
 if [ -f "/var/www/html/wp-config.php" ]; then
