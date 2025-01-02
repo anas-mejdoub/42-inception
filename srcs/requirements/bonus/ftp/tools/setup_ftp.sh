@@ -10,5 +10,5 @@ echo "${FTP_USER}:${FTP_PASSWD}" | chpasswd
 
 chmod -R 777 /var/www/html
 echo "ftp is starting..."
-
+ 
 exec $@
