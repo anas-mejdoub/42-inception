@@ -9,7 +9,6 @@ fi
 sed -i "s|bind 127.0.0.1 -::1|bind 0.0.0.0|" /etc/redis/redis.conf
 sed -i "s|protected-mode yes|protected-mode no|" /etc/redis/redis.conf
 
-fi
 chown -R redis:redis /var/lib/redis/
 chmod -R 777 /var/lib/redis/
 
