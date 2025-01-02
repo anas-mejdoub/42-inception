@@ -1,7 +1,6 @@
 FROM debian:12
 
-RUN apt-get update && apt-get install -y nginx openssl && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y nginx openssl
 
 RUN mkdir -p /etc/nginx && \
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
